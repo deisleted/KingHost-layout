@@ -1,0 +1,65 @@
+.s-second {
+  .container {
+    .principal {
+      @include header;
+      margin-top: 51px;
+      margin-bottom: 53px;
+      h2 {
+        width: 100%;
+        max-width: 502px;
+        @include h2;
+      }
+      p {
+        width: 100%;
+        max-width: 286px;
+        @include p-black-bold;
+      }
+    }
+    .cards {
+      display: flex;
+      gap: auto;
+      .card-active {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        padding: 41px 34px 68px 42px;
+        border-radius: 12px;
+        background-color: $bg-cards-opaco;
+        h3 {
+          width: 100%;
+          max-width: 106px;
+          margin-top: 30px;
+          @include h3;
+        }
+        p {
+          width: 100%;
+          max-width: 204px;
+          margin-top: 20px;
+          @include p-gray;
+        }
+      }
+      .card {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        padding: 41px 34px 68px 42px;
+
+        .icon {
+          @include bg-icon($bg-cards-opaco);
+        }
+        h3 {
+          width: 100%;
+          max-width: 106px;
+          margin-top: 30px;
+          @include h3;
+        }
+        p {
+          width: 100%;
+          max-width: 204px;
+          margin-top: 20px;
+          @include p-gray;
+        }
+      }
+    }
+  }
+}

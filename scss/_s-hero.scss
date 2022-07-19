@@ -1,0 +1,48 @@
+.s-hero {
+  background-color: $brand-purple;
+  margin-top: 4px;
+  .container {
+    @include header;
+    padding-top: 39px;
+    .textos {
+      width: 100%;
+      max-width: 550px;
+      h1 {
+        @include h1;
+      }
+      p {
+        margin-top: 16px;
+        @include p-white(1.8rem, 150%);
+      }
+      button {
+        margin-top: 32px;
+        @include config-buttom;
+      }
+      a {
+        display: flex;
+        margin-top: 86px;
+        img {
+          width: 42px;
+          height: 42px;
+          background: $bg-seta;
+          opacity: 0.4;
+          border-radius: 6px;
+        }
+        span {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          padding-left: 16px;
+          @include p-white-bold(1.6rem);
+        }
+      }
+    }
+  }
+  .imagem {
+    display: flex;
+    width: 100%;
+    max-width: 692px;
+    img {
+    }
+  }
+}
