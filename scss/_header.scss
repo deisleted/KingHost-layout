@@ -1,26 +1,42 @@
-
 header {
-    background-color: $brand-purple;
-    .container {
-        height: 119px;
-        @include header;
-        nav {
-            @include centralizar;
-            .help {
-                padding-right: 56px; 
-                @include p-white(1.6rem, 19px);
-                img {
-                    padding-right: 1.6rem;
-                    display: inline-block;
-                }
-            }
-            .bold-aviso {
-                @include p-white-bold(1.6rem);
-                img {
-                    padding-right: 1.6rem;
-                    display: inline-block;
-                }
-            }
+  background-color: $brand-purple;
+  width: 100%;
+  max-width: 1920px;
+  .container {
+    height: 119px;
+    @include header;
+    nav {
+      @include centralizar;
+      .help {
+        padding-right: 56px;
+        @include p-white(1.6rem, 19px);
+        img {
+          padding-right: 1.6rem;
+          display: inline-block;
         }
+      }
+      .bold-aviso {
+        @include p-white-bold(1.6rem);
+        img {
+          padding-right: 1.6rem;
+          display: inline-block;
+        }
+      }
     }
+    @include responsive(600px) {
+      .container {
+        justify-content: center;
+      }
+      nav {
+        display: none;
+      }
+    }
+    @include responsive(480px) {
+      height: 8rem;
+      justify-content: center;
+      .logo {
+        max-width: 164px;
+      }
+    }
+  }
 }

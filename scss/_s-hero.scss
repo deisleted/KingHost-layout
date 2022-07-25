@@ -1,48 +1,71 @@
 .s-hero {
   background-color: $brand-purple;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   .container {
-    @include header;
-    padding-top: 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     .textos {
       width: 100%;
-      max-width: 550px;
+      max-width: 55rem;
+      padding-top: 3.9rem;
       h1 {
         @include h1;
+        margin-bottom: 1.6rem;
       }
       p {
-        margin-top: 16px;
+        margin-bottom: 3.2rem;
         @include p-white(1.8rem, 150%);
       }
       button {
-        margin-top: 32px;
+        margin-bottom: 8rem; 
         @include config-buttom;
       }
       a {
         display: flex;
-        margin-top: 86px;
         img {
-          width: 42px;
-          height: 42px;
+          width: 4.2rem;
+          height: 4.2prem;
           background: $bg-seta;
-          opacity: 0.4;
           border-radius: 6px;
         }
         span {
           display: flex;
           align-items: center;
           text-align: center;
-          padding-left: 16px;
+          padding-left: 1.6rem;
           @include p-white-bold(1.6rem);
         }
       }
     }
   }
   .imagem {
-    display: flex;
-    width: 100%;
-    max-width: 692px;
-    img {
+    position: relative;
+    top: 3.9rem;  
+  }
+  @include responsive(991px) {
+    .container {
+      flex-direction: column;
     }
+    .textos {
+      max-width: 100% !important;
+      margin-bottom: 3rem;
+      h1 {
+        text-align: center;
+      }
+      p {
+        max-width: 100%;
+        text-align: center;
+      }
+      button {
+        margin: auto;
+        margin-bottom: 4rem;
+        display: block;
+      }
+      a {
+        justify-content: center;
+      }
+    }
+
   }
 }

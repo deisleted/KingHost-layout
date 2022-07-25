@@ -18,6 +18,8 @@
     .cards {
       display: flex;
       gap: auto;
+      padding-bottom: 41px;
+      flex-wrap: wrap;
       .card-active {
         display: block;
         width: 100%;
@@ -25,6 +27,9 @@
         padding: 41px 34px 68px 42px;
         border-radius: 12px;
         background-color: $bg-cards-opaco;
+        margin-right: 30px;
+        .icon-active {
+          @include bg-icon ($white-text)}
         h3 {
           width: 100%;
           max-width: 106px;
@@ -43,7 +48,7 @@
         width: 100%;
         max-width: 280px;
         padding: 41px 34px 68px 42px;
-
+        border-bottom: 0.3rem solid rgba(95, 60, 161, 0.1)  ;
         .icon {
           @include bg-icon($bg-cards-opaco);
         }

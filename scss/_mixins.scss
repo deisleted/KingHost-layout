@@ -1,83 +1,93 @@
+@mixin responsive($screenwidth) {
+  @media (max-width: $screenwidth) {
+    @content;
+  }
+}
+
 @mixin header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @mixin centralizar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 @mixin config-buttom {
-    font-family: 'PT Sans', sans-serif;
-    background-color: $secondary-yellow;
-    padding: 1.6rem 5.2rem;
-    color: $purple-text;
-    border-radius: 0.6rem;
-    font-weight: 700;
-    line-height: 2.1rem;
-    
+  font-family: "PT Sans", sans-serif;
+  background-color: $secondary-yellow;
+  padding: 1.6rem 5.2rem;
+  color: $purple-text;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  line-height: 2.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $houver-buttom;
+    color: $white-text;
+  }
 }
 
-@mixin bg-icon ($bg-cor) {
-    width: 64px;
-    height: 64px;
-    background-color: $bg-cor;
-    border-radius: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@mixin bg-icon($bg-cor) {
+  width: 64px;
+  height: 64px;
+  background-color: $bg-cor;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin h1 {
-    font-family: 'PT Sans', sans-serif;
-    font-weight: 700;
-    font-size: 4.8rem;
-    line-height: 120%;
-    color: $white-text;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 120%;
+  color: $white-text;
 }
 
 @mixin h2 {
-    font-family: 'PT Sans', sans-serif;
-    font-weight: 700;
-    font-size: 3.2rem;
-    line-height: 130%;
-    color: $gray-title;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 130%;
+  color: $gray-title;
 }
 
-@mixin h3{
-    font-weight: 800;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    color: $purple-text;
+@mixin h3 {
+  font-weight: 800;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: $purple-text;
 }
 
 @mixin p-gray {
-    font-weight: 400;
-    line-height: 165%;
-    color: $gray-text;
+  font-weight: 400;
+  line-height: 165%;
+  color: $gray-text;
 }
 
-@mixin p-white($tamanhoLetra , $alturaLinha) {
-    font-weight: 400;
-    font-size: $tamanhoLetra;
-    line-height: $alturaLinha;
-    color: $white-text;
+@mixin p-white($tamanhoLetra, $alturaLinha) {
+  font-weight: 400;
+  font-size: $tamanhoLetra;
+  line-height: $alturaLinha;
+  color: $white-text;
 }
 
 @mixin p-white-bold($tamanhoLetra) {
-    font-weight: 700;
-    font-size: $tamanhoLetra;
-    line-height: 1.9rem;
-    color: $white-text;
+  font-weight: 700;
+  font-size: $tamanhoLetra;
+  line-height: 1.9rem;
+  color: $white-text;
 }
 
 @mixin p-black-bold {
-    font-weight: 700;
-    line-height: 150%;
-    color: $gray-text;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  line-height: 150%;
+  color: $gray-text;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

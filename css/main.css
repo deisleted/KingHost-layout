@@ -2,7 +2,9 @@
 
 html { font-size: 62.5%; }
 
-img { max-width: 100%; display: block; }
+@media (max-width: 1280px) { html { font-size: 50%; } }
+
+img { max-width: 100%; }
 
 button { cursor: pointer; }
 
@@ -10,7 +12,7 @@ button { cursor: pointer; }
 
 .container-fluid { width: 100%; padding: 0px 15px; }
 
-header { background-color: #5f3ca1; }
+header { background-color: #5f3ca1; width: 100%; max-width: 1920px; }
 
 header .container { height: 119px; display: flex; justify-content: space-between; align-items: center; }
 
@@ -24,41 +26,58 @@ header .container nav .bold-aviso { font-weight: 700; font-size: 1.6rem; line-he
 
 header .container nav .bold-aviso img { padding-right: 1.6rem; display: inline-block; }
 
-.s-hero { background-color: #5f3ca1; margin-top: 4px; }
+@media (max-width: 600px) { header .container .container { justify-content: center; }
+  header .container nav { display: none; } }
 
-.s-hero .container { display: flex; justify-content: space-between; align-items: center; padding-top: 39px; }
+@media (max-width: 480px) { header .container { height: 8rem; justify-content: center; }
+  header .container .logo { max-width: 164px; } }
 
-.s-hero .container .textos { width: 100%; max-width: 550px; }
+.s-hero { background-color: #5f3ca1; margin-top: 0.25rem; }
 
-.s-hero .container .textos h1 { font-family: 'PT Sans', sans-serif; font-weight: 700; font-size: 4.8rem; line-height: 120%; color: #fcfcfc; }
+.s-hero .container { display: flex; justify-content: space-between; align-items: flex-start; }
 
-.s-hero .container .textos p { margin-top: 16px; font-weight: 400; font-size: 1.8rem; line-height: 150%; color: #fcfcfc; }
+.s-hero .container .textos { width: 100%; max-width: 55rem; padding-top: 3.9rem; }
 
-.s-hero .container .textos button { margin-top: 32px; font-family: 'PT Sans', sans-serif; background-color: #ffbf00; padding: 1.6rem 5.2rem; color: #5f3ca1; border-radius: 0.6rem; font-weight: 700; line-height: 2.1rem; }
+.s-hero .container .textos h1 { font-family: "PT Sans", sans-serif; font-weight: 700; font-size: 4.8rem; line-height: 120%; color: #fcfcfc; margin-bottom: 1.6rem; }
 
-.s-hero .container .textos a { display: flex; margin-top: 86px; }
+.s-hero .container .textos p { margin-bottom: 3.2rem; font-weight: 400; font-size: 1.8rem; line-height: 150%; color: #fcfcfc; }
 
-.s-hero .container .textos a img { width: 42px; height: 42px; background: #7B5ABA; opacity: 0.4; border-radius: 6px; }
+.s-hero .container .textos button { margin-bottom: 8rem; font-family: "PT Sans", sans-serif; background-color: #ffbf00; padding: 1.6rem 5.2rem; color: #5f3ca1; border-radius: 0.6rem; font-weight: 700; line-height: 2.1rem; cursor: pointer; transition: all 0.3s; }
 
-.s-hero .container .textos a span { display: flex; align-items: center; text-align: center; padding-left: 16px; font-weight: 700; font-size: 1.6rem; line-height: 1.9rem; color: #fcfcfc; }
+.s-hero .container .textos button:hover { background-color: #320d78; color: #fcfcfc; }
 
-.s-hero .imagem { display: flex; width: 100%; max-width: 692px; }
+.s-hero .container .textos a { display: flex; }
+
+.s-hero .container .textos a img { width: 4.2rem; height: 4.2prem; background: rgba(123, 90, 186, 0.4); border-radius: 6px; }
+
+.s-hero .container .textos a span { display: flex; align-items: center; text-align: center; padding-left: 1.6rem; font-weight: 700; font-size: 1.6rem; line-height: 1.9rem; color: #fcfcfc; }
+
+.s-hero .imagem { position: relative; top: 3.9rem; }
+
+@media (max-width: 991px) { .s-hero .container { flex-direction: column; }
+  .s-hero .textos { max-width: 100% !important; margin-bottom: 3rem; }
+  .s-hero .textos h1 { text-align: center; }
+  .s-hero .textos p { max-width: 100%; text-align: center; }
+  .s-hero .textos button { margin: auto; margin-bottom: 4rem; display: block; }
+  .s-hero .textos a { justify-content: center; } }
 
 .s-second .container .principal { display: flex; justify-content: space-between; align-items: center; margin-top: 51px; margin-bottom: 53px; }
 
-.s-second .container .principal h2 { width: 100%; max-width: 502px; font-family: 'PT Sans', sans-serif; font-weight: 700; font-size: 3.2rem; line-height: 130%; color: #453F51; }
+.s-second .container .principal h2 { width: 100%; max-width: 502px; font-family: "PT Sans", sans-serif; font-weight: 700; font-size: 3.2rem; line-height: 130%; color: #453F51; }
 
 .s-second .container .principal p { width: 100%; max-width: 286px; font-weight: 700; line-height: 150%; color: #5e5570; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
-.s-second .container .cards { display: flex; gap: auto; }
+.s-second .container .cards { display: flex; gap: auto; padding-bottom: 41px; flex-wrap: wrap; }
 
-.s-second .container .cards .card-active { display: block; width: 100%; max-width: 280px; padding: 41px 34px 68px 42px; border-radius: 12px; background-color: rgba(197, 190, 220, 0.1); }
+.s-second .container .cards .card-active { display: block; width: 100%; max-width: 280px; padding: 41px 34px 68px 42px; border-radius: 12px; background-color: rgba(197, 190, 220, 0.1); margin-right: 30px; }
+
+.s-second .container .cards .card-active .icon-active { width: 64px; height: 64px; background-color: #fcfcfc; border-radius: 1.2rem; display: flex; align-items: center; justify-content: center; }
 
 .s-second .container .cards .card-active h3 { width: 100%; max-width: 106px; margin-top: 30px; font-weight: 800; font-size: 1.8rem; line-height: 2.2rem; color: #5f3ca1; }
 
 .s-second .container .cards .card-active p { width: 100%; max-width: 204px; margin-top: 20px; font-weight: 400; line-height: 165%; color: #5e5570; }
 
-.s-second .container .cards .card { display: block; width: 100%; max-width: 280px; padding: 41px 34px 68px 42px; }
+.s-second .container .cards .card { display: block; width: 100%; max-width: 280px; padding: 41px 34px 68px 42px; border-bottom: 0.3rem solid rgba(95, 60, 161, 0.1); }
 
 .s-second .container .cards .card .icon { width: 64px; height: 64px; background-color: rgba(197, 190, 220, 0.1); border-radius: 1.2rem; display: flex; align-items: center; justify-content: center; }
 
